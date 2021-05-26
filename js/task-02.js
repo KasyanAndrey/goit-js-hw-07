@@ -1,37 +1,20 @@
-// const descrEl = document.querySelector('p');
-// // console.log(descrEl);
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
 
-// /* -------------------ul(categories) --------------------- */
+const ingredientsListEl = document.querySelector('#ingredients');
+console.log(ingredientsListEl);
 
-// const categoriesListEl = document.createElement('ul');
-// categoriesListEl.id = '#categories';
-// descrEl.after(categoriesListEl);
+const elements = ingredients.map(ingredient => {
+  const itemEl = document.createElement('li');
+  itemEl.textContent = ingredient;
 
-// /* ------------------ li(categories) ---------------------- */
+  return itemEl;
+});
 
-// const categoriesItemEl = document.createElement('li');
-// categoriesItemEl.classList.add('item');
-// categoriesListEl.appendChild(categoriesItemEl);
-
-// /* ------------------ h2 ---------------------- */
-
-// const categoriesTitleEl = document.createElement('h2');
-
-// /* ------------------ ul subList----------------------- */
-
-// const subListEl = document.createElement('ul');
-
-// /* ------------------- li(underItem) ------------------- */
-
-// const underItemEl = document.createElement('li');
-
-// /* --------------------------------------------------- */
-// subListEl.appendChild(underItemEl);
-// // console.log(subListEl);
-
-// /* ---------------------------------------------- */
-
-// categoriesItemEl.append(categoriesTitleEl, subListEl);
-// // console.log(categoriesItemEl);
-
-// console.log(categoriesListEl);
+ingredientsListEl.append(...elements);
