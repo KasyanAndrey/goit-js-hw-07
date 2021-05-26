@@ -37,7 +37,14 @@ img {
   margin: -1px;
 }
 
-ul {
-  text-align: center;
-  margin: 30px;
+#gallery {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  width: 300px;
 }
