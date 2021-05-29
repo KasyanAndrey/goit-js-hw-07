@@ -39,7 +39,6 @@ img {
 
 #gallery {
   width: 1024px;
-  margin: 0 auto;
   padding: 24px;
   display: flex;
   justify-content: space-around;
