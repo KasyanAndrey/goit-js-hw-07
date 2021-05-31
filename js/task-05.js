@@ -1,10 +1,16 @@
-const refs = {
-  input: document.querySelector('#name-input'),
-  nameOutput: document.querySelector('#name-output'),
+const inputRef = document.querySelector('#name-input');
+const spanRef = document.querySelector('#name-output');
+const contentOfspan = spanRef.textContent;
+
+const inputChangeName = event => {
+  spanRef.textContent = event.target.value;
 };
 
-refs.input.addEventListener('input', onInputChange);
+const inputEmptyField = event => {
+  if (event.target.value === '') {
+    spanRef.textContent = contentOfspan;
+  }
+};
 
-function onInputChange(event) {
-  refs.nameOutput.textContent = event.currentTarget.value;
-}
+inputRef.addEventListener('input', inputChangeName);
+inputRef.addEventListener('input', inputEmptyField);
